@@ -1,0 +1,29 @@
+$TTL 3600 ; 1 Hour
+
+; Statement of Authority (SOA)
+@ IN SOA ns0.foo.org.nz. bsd-server.foo.org.nz (
+	20150834 	; Serial number	
+	10800 		; 3h Slave refresh
+	3600 		; 1h Slave retry
+	259200		; 3d Slave expires
+	3600)	 	; 1h Negative ttl
+
+
+foo.org.nz. IN NS ns0.foo.org.nz.
+foo.org.nz. IN NS ns1.foo.org.nz.
+
+
+ns0 IN A 172.16.5.4
+ns1 IN A 192.168.2.100
+
+router1 IN A 172.16.5.2
+router2 IN A 172.16.5.3
+	IN A 192.168.2.2
+
+linux IN A 172.16.5.30
+win-server IN A 172.16.5.10
+win-client IN A 172.16.5.13
+
+mail IN MX 10 ns0
+
+www IN CNAME ns0

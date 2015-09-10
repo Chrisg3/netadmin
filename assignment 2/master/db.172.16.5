@@ -1,0 +1,17 @@
+$ORIGIN 5.16.172.in-addr.arpa.
+$TTL	3600
+
+@ IN SOA ns0.foo.org.nz. bsd-server.foo.org.nz. (
+	2015080808	; Serial
+	3600		; Refresh
+	900		; Retry
+	3600000		; Expire
+	3600 ) 		; Minimum
+ 
+@ IN NS ns0.foo.org.nz.	
+2 IN PTR router1.foo.org.nz.
+3 IN PTR router2.foo.org.nz.
+4 IN PTR ns0.foo.org.nz.
+13 IN PTR win-client.foo.org.nz.
+10 IN PTR win-server.foo.org.nz.
+30 IN PTR linux.foo.org.nz.
